@@ -17,3 +17,5 @@ libraryDependencies ++= {
 }
 
 libraryDependencies += "no.vedaadata" %% "html-util" % "0.1-SNAPSHOT"
+
+resolvers += "My Maven Repo Resolver" at "https://mymavenrepo.com/repo/pINely5F8nmLUayJnPul/"
