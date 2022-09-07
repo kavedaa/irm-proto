@@ -1,0 +1,70 @@
+body {
+  font-family: sans-serif;
+}
+
+table {
+  font-size: 10pt;
+  border-collapse: collapse;
+}
+
+table, thead, th.title {
+  border: 2px solid;  
+}
+
+td.left {
+  border-right: 2px solid;
+}
+
+thead {
+  top: 0;
+  position: sticky;
+}
+
+th {
+  font-weight: normal;
+}
+
+th, td {
+  border: 1px solid;
+}
+
+th.top {
+  writing-mode: vertical-rl; 
+  transform: rotate(180deg);
+  vertical-align: baseline;
+  text-align: left;
+}
+
+td {
+  padding: 0.3em;
+  min-width: 1.5em;
+}
+
+td.symbol {
+  text-align: center;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.title {
+  height: 100%;
+  padding: 0;
+}
+
+.title-content {
+  height: 100%;
+  font-size: large;
+  font-weight: bold;
+}
+
+.column-title {
+  height: 50%;
+  text-align: right;
+}
+
+.row-title {
+  height: 50%;
+  text-align: left;
+}
