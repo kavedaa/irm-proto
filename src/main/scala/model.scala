@@ -8,8 +8,10 @@ case class System(
   number: Option[Int],
   label: String)
 
-enum ConnectionType:
-  case Create, Read, Update
+enum ConnectionType(val symbol: String):
+  case Create extends ConnectionType("#x2B24")
+  case Read extends ConnectionType("#x2B58")
+  case Update extends ConnectionType("#x25C9")
 
 case class Connection(
   system: System,

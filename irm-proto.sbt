@@ -1,6 +1,6 @@
 name := "irm-proto"
 
-scalaVersion := "3.1.0"
+scalaVersion := "3.2.0"
 
 enablePlugins(JavaAppPackaging)
 

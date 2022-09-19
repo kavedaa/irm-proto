@@ -1,0 +1,82 @@
+body {
+  font-family: sans-serif;
+}
+
+table {
+  font-size: 10pt;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0.3em;
+  min-width: 1.5em;
+}
+
+td.title {
+  border: 2px solid;
+  padding: 0;
+}
+
+td.title {
+  font-size: larger;
+  font-weight: bold;
+}
+
+td.title > .horizontal {
+  text-align: right;
+  margin-right: 1em;
+  margin-bottom: 2em;
+}
+
+td.title > .vertical {
+  text-align: left;
+  margin-left: 1em;
+  margin-top: 2em;
+}
+
+td.label.horizontal, td.total-label.horizontal {
+  writing-mode: vertical-rl; 
+  transform: rotate(180deg);
+  vertical-align: baseline;
+  text-align: left;
+}
+
+td.label-aux, td.label, td.connection {
+  border: 1px solid;
+}
+
+td.label-aux.horizontal {
+  border-top: 2px solid;
+}
+
+td.label-aux.vertical {
+  border-left: 2px solid;
+}
+
+td.label.horizontal {
+  border-bottom: 2px solid;
+}
+
+td.label.vertical {
+  border-right: 2px solid;
+}
+
+td.total-label-aux.horizontal.first, td.total-label.horizontal.first, td.total.horizontal.first {
+  border-left: 2px solid;
+}
+
+td.total-label-aux.vertical.first, td.total-label.vertical.first, td.total.vertical.first {
+  border-top: 2px solid;
+}
+
+td.connection, td.total-label-aux {
+  text-align: center;
+}
+
+td.total {
+  text-align: right;
+}
+
+td.sum-total {
+  font-weight: bold;
+}

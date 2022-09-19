@@ -27,10 +27,12 @@ object IrmProto extends ScalaXmlSupport:
   val systemForm = productFormElement[System]
   val informationGroupForm = productFormElement[InformationGroup]
 
+  val selectPrompt = Some("Please select...")
+
   val connectionForm = 
-    given FormElement[ConnectionType] = new SelectFormElement(ConnectionType.values)(_.toString)(_.toString)
-    given FormElement[System] = new SelectFormElement(Store.systems)(_.label)(_.label)
-    given FormElement[InformationGroup] = new SelectFormElement(Store.informationGroups)(_.label)(_.label)
+    given FormElement[ConnectionType] = new SelectFormElement(ConnectionType.values, selectPrompt)(_.toString)(_.toString)
+    given FormElement[System] = new SelectFormElement(Store.systems, selectPrompt)(_.label)(_.label)
+    given FormElement[InformationGroup] = new SelectFormElement(Store.informationGroups, selectPrompt)(_.label)(_.label)
     productFormElement[Connection]
 
   val routes: Route =
@@ -123,8 +125,8 @@ object IrmProto extends ScalaXmlSupport:
         }
       }
     } ~
-    path("style.css") {
-      getFromResource("style.css")
+    path("matrix.css") {
+      getFromResource("matrix.css")
     }
 
   def form(title: String, formElement: FormElement[?]) = 
@@ -140,7 +142,7 @@ object IrmProto extends ScalaXmlSupport:
     <html>
       <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="matrix.css" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
       </head>
       <body>
