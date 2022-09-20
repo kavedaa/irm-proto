@@ -19,3 +19,5 @@ libraryDependencies ++= {
 libraryDependencies += "no.vedaadata" %% "html-util" % "0.1.0"
 
 resolvers += "My Maven Repo Resolver" at "https://mymavenrepo.com/repo/pINely5F8nmLUayJnPul/"
+
+assembly / mainClass := Some("irm.IrmProto")
