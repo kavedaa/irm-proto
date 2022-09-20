@@ -16,6 +16,6 @@ libraryDependencies ++= {
   ).map(_.cross(CrossVersion.for3Use2_13))
 }
 
-libraryDependencies += "no.vedaadata" %% "html-util" % "0.1-SNAPSHOT"
+libraryDependencies += "no.vedaadata" %% "html-util" % "0.1.0"
 
 resolvers += "My Maven Repo Resolver" at "https://mymavenrepo.com/repo/pINely5F8nmLUayJnPul/"
