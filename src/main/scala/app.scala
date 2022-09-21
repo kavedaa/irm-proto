@@ -155,9 +155,10 @@ object IrmProto extends ScalaXmlSupport:
 
   def main(args: Array[String]): Unit =
     val serverBuilder = Http().newServerAt(config.getString("http.interface"), config.getInt("http.port")).bindFlow(routes)
-    StdIn.readLine()
-    // Unbind from the port and shut down when done
-    serverBuilder
-      .flatMap(_.unbind())
-      .onComplete(_ => system.terminate())
+    if args.contains("dev") then
+      StdIn.readLine()
+      // Unbind from the port and shut down when done
+      serverBuilder
+        .flatMap(_.unbind())
+        .onComplete(_ => system.terminate())
 
